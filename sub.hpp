@@ -27,6 +27,15 @@ class Sub : public Base
 		{
 			return str1 + " - " + str2;
 		}
+	        virtual Base* get_left()
+        	{
+                	return arg1;
+        	}
+        	virtual Base* get_right()
+        	{
+                	return arg2;
+        	}
+
 };
 
 #endif //__SUB_HPP__

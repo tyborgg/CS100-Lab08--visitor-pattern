@@ -10,7 +10,7 @@ class Div : public Base {
     public:
         double product;
         Base* num1;
-        Base* num;
+        Base* num2;
         string str1;
         string str2;
 	string out;
@@ -33,6 +33,14 @@ class Div : public Base {
         virtual string stringify() {
                 return out;
         }
+	virtual Base* get_left()
+	{
+		return num1;
+	}
+	virtual Base* get_right()
+	{
+		return num2;
+	}
 };
 
 #endif //__DIV_HPP__
