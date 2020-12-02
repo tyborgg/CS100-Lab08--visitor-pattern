@@ -22,6 +22,14 @@ class Op : public Base {
 		text = std::to_string(result);
 		return text;
 	}
+	virtual Base* get_right()
+	{
+		return nullptr;
+	}
+	virtual Base* get_left()
+	{
+		return nullptr;
+	}
 };
 
 #endif //__OP_HPP__

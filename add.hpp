@@ -24,6 +24,15 @@ class Add : public Base {
         virtual string stringify() {
 		return this->str1 + " + " + this->str2;
 	}
+
+	virtual Base* get_left()
+	{
+		return num1;
+	}
+	virtual Base* get_right()
+	{
+		return num2;
+	}
 };
 
 #endif //_ADD_HPP__
