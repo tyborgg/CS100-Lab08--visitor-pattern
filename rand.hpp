@@ -5,8 +5,11 @@
 #include <string>
 #include <iostream>
 #include <stdlib.h>
+#include "visitor.hpp"
 
 using namespace std;
+//class Iterator;
+
 
 class Rand : public Base {
     public:
@@ -36,6 +39,11 @@ class Rand : public Base {
 		return it1;
 		//needs to return a null iterator.
 	}
+        virtual void accept(CountVisitor* v1)
+        {
+                v1->visit_rand();
+        }
+
 };
 
 #endif //__RAND_HPP__

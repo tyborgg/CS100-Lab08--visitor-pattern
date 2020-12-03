@@ -1,6 +1,6 @@
 
 #include "iterator.hpp"
-
+//#include "base.hpp"
 BinaryIterator::BinaryIterator(Base* ptr) : Iterator(ptr) {
     this->c = left;
 }
