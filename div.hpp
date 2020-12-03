@@ -16,16 +16,16 @@ class Div : public Base {
 	string out;
         Div(Base* op1, Base* op2) : Base() {
                 this->num1 = op1;
-                this->num = op2;
+                this->num2 = op2;
                 this->str1 = num1->stringify();
-                this->str2 = num->stringify();
+                this->str2 = num2->stringify();
 		
-		if(num->evaluate() == 0){
+		if(num2->evaluate() == 0){
 			this->product = -1;
 			this->out = "Error";
 		}
 		else{
-                	this->product = ((num1->evaluate()) / (num->evaluate()));
+                	this->product = ((num1->evaluate()) / (num2->evaluate()));
 			this->out = this->str1 + " / " + this->str2;
 		}
         }
