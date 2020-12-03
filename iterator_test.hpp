@@ -1,5 +1,5 @@
-#ifndef __PARSE_TEST_HPP__
-#define __PARSE_TEST_HPP__
+#ifndef __ITERATOR_TEST_HPP__
+#define __ITERATOR_TEST_HPP__
 
 #include "gtest/gtest.h"
 #include <string>

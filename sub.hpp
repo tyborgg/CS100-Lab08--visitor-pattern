@@ -2,6 +2,8 @@
 #define __SUB_HPP__
 
 #include "base.hpp"
+#include "visitor.hpp"
+//class Iterator;
 
 class Sub : public Base
 {
@@ -41,6 +43,10 @@ class Sub : public Base
 			return it1;
                 //needs to return a binary iterator
         	}
+		virtual void accept(CountVisitor* v1)
+		{
+			v1->visit_sub();
+		}
 
 };
 

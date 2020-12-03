@@ -1,6 +1,17 @@
 #ifndef __COUNT_VISITOR_HPP__
 #define __COUNT_VISITOR_HPP__
 
+#include "base.hpp"
+//#include "op.hpp"
+//#include "rand.hpp"
+//#include "mult.hpp"
+//#include "div.hpp"
+//#include "add.hpp"
+//#include "sub.hpp"
+//#include "pow.hpp"
+
+class Base;
+
 class CountVisitor{
     private:
         int ops;
@@ -13,7 +24,6 @@ class CountVisitor{
 
     public:
         CountVisitor();
-
         void visit_op();
         int op_count();
         void visit_rand();

@@ -4,6 +4,8 @@
 #include "base.hpp"
 #include <math.h>
 #include <string>
+#include "visitor.hpp"
+//class Iterator;
 
 class Pow : public Base
 {
@@ -43,6 +45,11 @@ class Pow : public Base
 			return it1;
                 	//needs to return a binary iterator
         	}
+	        virtual void accept(CountVisitor* v1)
+	        {
+                	v1->visit_pow();
+        	}
+
 
 };
 

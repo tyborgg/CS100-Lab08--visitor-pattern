@@ -3,9 +3,11 @@
 
 #include "base.hpp"
 #include <string>
-
+#include "visitor.hpp"
 using namespace std;
 
+//class Iterator;
+//class CountVisitor;
 class Add : public Base {
     public:
 	double product;
@@ -38,6 +40,10 @@ class Add : public Base {
 		Iterator* it1 = new BinaryIterator(this);
 		return it1;
 		//needs to return a binary iterator
+	}
+	virtual void accept(CountVisitor* v1)
+	{
+		v1->visit_add();
 	}
 };
 

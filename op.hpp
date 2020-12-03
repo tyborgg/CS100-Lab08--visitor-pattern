@@ -3,8 +3,9 @@
 
 #include "base.hpp"
 #include <string>
-#include <iostream>
+#include "visitor.hpp"
 #include <stdlib.h>
+
 class Op : public Base {
     public:
 	double result;
@@ -36,6 +37,12 @@ class Op : public Base {
 		return it1;
 		//needs to return a null iterator
 	}
+
+        virtual void accept(CountVisitor* v1)
+        {
+                v1->visit_op();
+        }
+
 };
 
 #endif //__OP_HPP__
