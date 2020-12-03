@@ -30,6 +30,12 @@ class Rand : public Base {
 	{
 		return nullptr;
 	}
+	virtual Iterator* create_iterator()
+	{
+		Iterator* it1 = new NullIterator(this);
+		return it1;
+		//needs to return a null iterator.
+	}
 };
 
 #endif //__RAND_HPP__

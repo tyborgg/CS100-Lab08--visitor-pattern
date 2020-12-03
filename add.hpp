@@ -33,6 +33,12 @@ class Add : public Base {
 	{
 		return num2;
 	}
+	virtual Iterator* create_iterator()
+	{
+		Iterator* it1 = new BinaryIterator(this);
+		return it1;
+		//needs to return a binary iterator
+	}
 };
 
 #endif //_ADD_HPP__
