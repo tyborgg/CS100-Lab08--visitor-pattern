@@ -3,6 +3,9 @@
 
 #include <string>
 #include "iterator.hpp"
+
+class Iterator;
+
 class Base {
     public:
         /* Constructors */
