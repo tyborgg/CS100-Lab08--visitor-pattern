@@ -41,6 +41,13 @@ class Div : public Base {
 	{
 		return num2;
 	}
+        virtual Iterator* create_iterator()
+        {
+		Iterator* it1 = new BinaryIterator(this);
+		return it1;
+                //needs to return a binary iterator
+        }
+
 };
 
 #endif //__DIV_HPP__
