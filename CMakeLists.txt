@@ -11,6 +11,13 @@ ADD_EXECUTABLE(test
    unit_test.cpp 
 )
 
+ADD_EXECUTABLE(main
+   visitor.cpp
+   preorder_iterator.cpp
+   binary_iterator.cpp
+   main.cpp
+)
+
 TARGET_LINK_LIBRARIES(test gtest)
 TARGET_COMPILE_DEFINITIONS(test PRIVATE gtest_disable_pthreads=ON)
 
